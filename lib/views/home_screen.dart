@@ -22,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               margin: EdgeInsets.only(left: width*0.03),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: height * 0.01),
                   Container(
@@ -29,8 +30,43 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontSize: 18,fontWeight: FontWeight.bold
                     ),),
                   ),
+                  SizedBox(height: height * 0.01),
+                  Container(
+                    height: 1,
+                    color: Colors.grey.withOpacity(0.7),
+                    width: width,
+                    margin: EdgeInsets.symmetric(horizontal: width*0.01),
+
+                  ),
                 ],
               ),
+            ),
+            Container(
+              color: Colors.white70,
+              margin: EdgeInsets.only(top: height * 0.08),
+              child: ListView.builder(
+                itemCount: 12,
+                itemBuilder: (context, index){
+                return Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                      blurRadius: 1,
+                      color: Colors.grey,
+                      offset: Offset(0, 2),
+                        spreadRadius: 1)
+                      ]),
+                  height: height*0.15,
+                  margin: EdgeInsets.symmetric(vertical: width*0.02),
+                  child: Row(
+                    children: [
+
+                    ],
+                  ),
+                );
+            }),
             )
           ],
         )
