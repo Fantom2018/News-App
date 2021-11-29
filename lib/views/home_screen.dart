@@ -59,10 +59,25 @@ class _HomeScreenState extends State<HomeScreen> {
                         spreadRadius: 1)
                       ]),
                   height: height*0.15,
-                  margin: EdgeInsets.symmetric(vertical: width*0.02),
-                  child: Row(
+                    margin: EdgeInsets.only(
+                        bottom: height * 0.01,
+                        top: height * 0.01,
+                        left: width * 0.02,
+                        right: width * 0.02),
+                    child: Row(
                     children: [
-
+                  Container(
+                    width: width * 0.3,
+                    height: height * 0.15,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            bottomLeft: Radius.circular(10),
+                          ),
+                          image: DecorationImage(
+                              image: NetworkImage("https://images.contentstack.io/v3/assets/bltf04078f3cf7a9c30/blt7b6786f4ce3d917d/60548730cc77b20f047a86ac/GettyImages-1223643360.jpg",),
+                              fit: BoxFit.cover)),
+                      ),
                     ],
                   ),
                 );
