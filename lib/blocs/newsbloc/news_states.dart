@@ -15,7 +15,7 @@ class NewsStates extends Equatable{
 
 class NewsInitState extends NewsStates{}
 
-class NewLoadingState extends NewsStates{}
+class NewsLoadingState extends NewsStates{}
 
 class NewsLoadedState extends NewsStates{
   final List<ArticleModel> articleList;

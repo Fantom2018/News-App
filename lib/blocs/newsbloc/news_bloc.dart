@@ -17,7 +17,7 @@ class NewsBloc extends Bloc<NewsEvents, NewsStates> {
     if (event is StartEvent) {
       try {
         List<ArticleModel> _articleList = [];
-        yield NewLoadingState();
+        yield NewsLoadingState();
         _articleList = await newsRepositoty.fetchNews();
         yield NewsLoadedState(articleList: _articleList);
       } catch (e) {

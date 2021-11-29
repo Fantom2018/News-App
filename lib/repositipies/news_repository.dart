@@ -5,10 +5,10 @@ import 'package:news_app_wit_bloc/models/article_model.dart';
 class NewsRepository{
   Future<List<ArticleModel>> fetchNews() async {
     var response = await http.get(Uri.parse(
-        "https://newsapi.org/v2/top-headlines?country=us&apiKey=ab3b6086568c4c00ad6c843bf2aa2cf5"));
+        "https://newsapi.org/v2/top-headlines?country=us&apiKey=56784348fb5d41c8844a1be8cb9ec14d"));
 
     var data = jsonDecode(response.body);
-
+    print(data);
     List<ArticleModel> _articleModelList = [];
 
     if (response.statusCode == 200) {

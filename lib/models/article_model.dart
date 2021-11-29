@@ -6,8 +6,7 @@ class ArticleModel {
   String? urlToImage;
   String? publishedAt;
   String? content;
-  Source source =Source(id: id, name: name) as Source;
-  
+  Source source =[] as Source;
 
 
   ArticleModel(
@@ -32,10 +31,6 @@ class ArticleModel {
     content = json['content'];
 
   }
-
-  static get name => null;
-
-  static get id => null;
 
 
   Map<String, dynamic> toJson() {
