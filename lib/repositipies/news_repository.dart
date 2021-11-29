@@ -5,7 +5,7 @@ import 'package:news_app_wit_bloc/models/article_model.dart';
 class NewsRepository{
   Future<List<ArticleModel>> fetchNews() async {
     var response = await http.get(Uri.parse(
-        "https://newsapi.org/v2/top-headlines?country=us&apiKey=56784348fb5d41c8844a1be8cb9ec14d"));
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"));
 
     var data = jsonDecode(response.body);
     print(data);
